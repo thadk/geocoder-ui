@@ -2,6 +2,7 @@
   "API": {
     "API_BASE_URL": {
       "development":"https://salty-gorge-12975.herokuapp.com",
+      "staging":"https://salty-gorge-12975.herokuapp.com",
       "developmentbasic": "http://192.168.2.62:8083"
     },
     "ALL_FILTERS_END_POINT": "filters/all",
