@@ -1,0 +1,122 @@
+@import "variables.scss";
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none !important;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  cursor: pointer;
+
+}
+
+input[type="checkbox"] + label:before,
+input[type="radio"] + label:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 12px;
+  width: 12px;
+  margin: 4px;
+}
+
+input[type="checkbox"].no-location:checked + label:before,
+input[type="radio"].no-location:checked + label:before {
+  border: $px-unit * 2 solid $gray-darker;
+  background: $no-locations;
+}
+
+input[type="checkbox"].no-location + label:before {
+  @include border-radius(50%);
+  @include filter-option($no-locations);
+}
+
+input[type="checkbox"].pending-location:checked + label:before,
+input[type="radio"].pending-location:checked + label:before {
+  border: $px-unit * 2 solid $gray-darker;
+  background: $pending-locations;
+}
+
+input[type="checkbox"].pending-location + label:before {
+  @include border-radius(50%);
+  @include filter-option($pending-locations);
+}
+
+input[type="checkbox"].verified-location:checked + label:before,
+input[type="radio"].verified-location:checked + label:before {
+  border: $px-unit * 2 solid $gray-darker;
+  background: $verified;
+}
+
+input[type="checkbox"].verified-location + label:before {
+  @include border-radius(50%);
+  @include filter-option($verified);
+}
+
+input[type="checkbox"].all-options:checked + label:before,
+input[type="radio"].all-options:checked + label:before {
+  border: $px-unit * 2 solid $gray-darker;
+  background: $black;
+}
+
+input[type="checkbox"].all-options + label:before {
+  @include border-radius(50%);
+  @include filter-option($black);
+}
+
+input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
+  font-size: $small !important;
+  padding-left: $px-unit;
+  display: inline-block;
+  font-family: $icon-font;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-stretch: bold;
+  @include grayBorder();
+  content: "\f00c";
+}
+
+.form-control {
+  @include inputText();
+  border: $px-unit solid $gray;
+  display: block;
+  width: $extend;
+  height: $base-unit * 4;
+  padding: 2px 2px;
+  line-height: 1.42857143;
+  color: $darkGray;
+  background-color: $white;
+  background-image: none;
+  border-radius: 0;
+}
+
+label {
+  @include fontDefault($regular, $darkGray);
+  font-weight: 100;
+  padding: 3px 0px;
+}
+
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: $white;
+  color: $gray;
+  opacity: 1;
+}
+
+.modal {
+  display: block;
+}
+
+label {
+  &.all-options {
+    font-size: $big - 2;
+    &:hover {
+      color: $darkGray !important;
+    }
+  }
+}
+

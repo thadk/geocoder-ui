@@ -1,0 +1,146 @@
+@import "variables.scss";
+
+/*INFO PANEL*/
+.leaflet-control-info-panel {
+  overflow: hidden !important;
+}
+
+#project-info {
+  -webkit-transition: opacity .1s; /* Safari */
+  height: $extend;
+  line-height: 110%;
+  transition: opacity .1s;
+  width: $base-unit * 55;
+  z-index: 9999;
+
+  @include fontDefault($medium, $darkGray);
+  @include scrollbar();
+
+  .panel-success {
+    min-height: $base-unit * 50;
+    overflow: hidden;
+
+    .panel-heading {
+      background-color: $header-bg;
+      border: none;
+      overflow: hidden;
+      position: relative;
+      width: $extend;
+      padding-bottom: 0px;
+    }
+  }
+
+  .heading-container {
+    height: $base-unit * 3;
+  }
+
+  .title {
+    @include fontDefault($huge, $darkGray);
+  }
+
+  .close-btn {
+    @include fontDefault($large, $green, 100);
+    @include middle();
+    float: right;
+    cursor: pointer;
+    position: relative;
+    top: $base-unit;
+    right: $base-unit / 2;
+  }
+
+  .tab-container {
+    border: 1px solid $gray;
+    height: $base-unit * 33;
+    overflow-y: auto;
+    &.no-padding {
+      padding: 0;
+    }
+    .panel-body {
+      padding: 0 $base-unit + 5 $base-unit + 5 $base-unit + 5;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    padding: 2px 0px 0px 0px;
+  }
+
+  label.inline {
+    display: inline !important;
+    margin-right: 3px;
+  }
+
+  .form-group {
+    padding: $base-unit + 5 0px;
+    margin: 0px;
+  }
+
+  .list-group {
+    padding: $base-unit / 2;
+    margin-top: 2px;
+  }
+
+  // read more styles
+  .read-more-state {
+    display: none;
+  }
+
+  .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+  }
+
+  .read-more-wrap {
+    line-height: 140%;
+    margin-bottom: 0;
+  }
+
+  .read-more-state:checked ~ .read-more-wrap .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+  }
+
+  .read-more-state ~ .read-more-trigger:before {
+    content: 'Show more';
+  }
+
+  .read-more-state:checked ~ .read-more-trigger:before {
+    content: 'Show less';
+  }
+
+  .read-more-trigger {
+    cursor: pointer;
+    text-decoration: underline;
+    color: $green;
+    font-size: $medium;
+    line-height: 2;
+    &:hover {
+      color: $black;
+    }
+  }
+}
+
+.fa-spinner {
+  margin-left: $base-unit / 2;
+}
+
+.project-info-label {
+  color: $black;
+  font-size: $small + 2;
+  font-weight: $normal-weight-text + 50;
+  margin-bottom: $base-unit / 2;
+}
+
+.project-info {
+  font-size: $big - 1.5;
+  color: $darkGray;
+  margin: 0 0 $base-unit;
+}
+
+.country-name {
+  color: $black;
+  font-weight: $normal-weight-text + 50;
+}

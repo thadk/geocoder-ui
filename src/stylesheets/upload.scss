@@ -1,0 +1,138 @@
+@import "variables.scss";
+
+.container {
+  width: $extend - 40 !important;
+  margin-bottom: $base-unit;
+}
+
+.upload-options {
+  font-size: $large;
+  margin-top: $base-unit * 2;
+  .panel{
+    box-shadow: none;
+    .panel-heading{
+      @include border-radius(0);
+      background: $header-bg;
+      border-bottom: 2px solid $gray;
+      color: $green-light;
+      font-size: $large;
+      padding: $base-unit - 3;
+    }
+    .panel-body{
+      padding: $base-unit + 5 0 0 0;
+    }
+  }
+}
+
+.upload-button {
+  @include border-radius(3px);
+  background: $green-light;
+  border: 1px solid $green-light;
+  color: $white;
+  font-size: $large + 2;
+  font-weight: $bold-text - 300;
+  margin-right: 0;
+  margin-top: $base-unit * 2;
+  min-width: 150px;
+  &:hover, &:focus{
+    background: darken($green-light, 10%);
+    border: 1px solid darken($green-light, 10%);
+    color: $white;
+    font-size: $large + 2;
+  }
+}
+
+.error-row{
+  padding: 3px;
+}
+
+.dropzone {
+  margin: $base-unit 0;
+
+  > div {
+    text-align: center;
+    width: $extend !important;
+    border: 2px solid $project-list-header-bg !important;
+    margin-top: $base-unit + 5;
+    min-height: 200px;
+    padding-top: $base-unit * 2;
+    font-size: $big;
+
+    ul {
+      line-height: 18px;
+      list-style: none;
+      li {
+        padding: 5px;
+      }
+      li:hover {
+        box-sizing: border-box;
+        border: 1px solid #CCC;
+      }
+    }
+    p {
+      line-height: 30px;
+    }
+    .link {
+      margin-right: $base-unit;
+      color: blue
+    }
+  }
+  .label{
+    margin-left: 5px;
+    float: right;
+  }
+}
+
+.spinner {
+  float: right;
+  margin-top: -10px;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.spinner > div {
+  background-color: #FF9505;
+  height: 100%;
+  margin: 1px;
+  width: 3px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s;
+}
+
+.spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+  -webkit-animation-delay: -0.8s;
+  animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+  20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes sk-stretchdelay {
+  0%, 40%, 100% {
+    transform: scaleY(0.4);
+    -webkit-transform: scaleY(0.4);
+  }  20% {
+       transform: scaleY(1.0);
+       -webkit-transform: scaleY(1.0);
+     }
+}

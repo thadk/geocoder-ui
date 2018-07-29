@@ -1,0 +1,220 @@
+@import "variables.scss";
+
+.bs-callout {
+  border: $px-unit solid $gray;
+  border-top: none;
+  border-left-width: $px-unit * 5;
+  margin: $base-unit * 2 0;
+  padding: 0;
+
+  .country {
+    background: $gray;
+    float: left;
+    font-weight: $bold-text;
+    color: $black;
+    float: left;
+    overflow: hidden;
+    padding: $base-unit - 3 $base-unit;
+    text-transform: none;
+    width: $extend - 30;
+  }
+
+  .delete-project {
+    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGZpbGw9IiNjZTAwMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDQ4IDQ4IiBoZWlnaHQ9IjQ4cHgiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDQ4IDQ4IiB3aWR0aD0iNDhweCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgaWQ9IkV4cGFuZGVkIj48Zz48Zz48cGF0aCBkPSJNNDEsNDhIN1Y3aDM0VjQ4eiBNOSw0NmgzMFY5SDlWNDZ6Ii8+PC9nPjxnPjxwYXRoIGQ9Ik0zNSw5SDEzVjFoMjJWOXogTTE1LDdoMThWM0gxNVY3eiIvPjwvZz48Zz48cGF0aCBkPSJNMTYsNDFjLTAuNTUzLDAtMS0wLjQ0Ny0xLTFWMTVjMC0wLjU1MywwLjQ0Ny0xLDEtMXMxLDAuNDQ3LDEsMXYyNUMxNyw0MC41NTMsMTYuNTUzLDQxLDE2LDQxeiIvPjwvZz48Zz48cGF0aCBkPSJNMjQsNDFjLTAuNTUzLDAtMS0wLjQ0Ny0xLTFWMTVjMC0wLjU1MywwLjQ0Ny0xLDEtMXMxLDAuNDQ3LDEsMXYyNUMyNSw0MC41NTMsMjQuNTUzLDQxLDI0LDQxeiIvPjwvZz48Zz48cGF0aCBkPSJNMzIsNDFjLTAuNTUzLDAtMS0wLjQ0Ny0xLTFWMTVjMC0wLjU1MywwLjQ0Ny0xLDEtMXMxLDAuNDQ3LDEsMXYyNUMzMyw0MC41NTMsMzIuNTUzLDQxLDMyLDQxeiIvPjwvZz48Zz48cmVjdCBoZWlnaHQ9IjIiIHdpZHRoPSI0OCIgeT0iNyIvPjwvZz48L2c+PC9nPjwvc3ZnPg==");
+    background-repeat: no-repeat;
+    background-size: $base-unit * 1.5 $base-unit * 1.5;
+    display: block;
+    height: $base-unit * 1.6;
+    width: $base-unit * 1.6;
+    opacity: 1;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .callout-heading {
+    display: inline;
+    margin-left: 0;
+    overflow: hidden;
+  }
+
+  .project-panel-content {
+    overflow: hidden;
+    padding: $base-unit;
+
+    p {
+      font-size: $big - 2;
+      font-weight: $normal-weight-text;
+      width: $extend - 10;
+    }
+
+    .status-link {
+      @include border-radius(3px);
+      float: right;
+      font-size: $medium;
+      font-weight: $normal-weight-text;
+      margin-bottom: $base-unit / 2;
+      padding: $base-unit - 3 $base-unit * 2 $base-unit - 3 $base-unit * 2;
+      &:hover {
+        background: $black;
+      }
+
+      &.gray {
+        background: $gray-darker;
+      }
+
+      a {
+        color: $white;
+        padding: $base-unit;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .loading {
+      margin-top: 4px;
+    }
+  }
+  h3 {
+    margin-top: 0;
+    a {
+      color: $black;
+      font-weight: $bold-text - 100;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+.bs-callout h4 {
+  margin-top: 0;
+  margin-bottom: $base-unit / 2;
+
+  a {
+    text-decoration: none
+  }
+
+}
+
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+
+.bs-callout code {
+  @include border-radius(3px);
+}
+
+.bs-callout + .bs-callout {
+  margin-top: -($base-unit / 2);
+}
+
+.bs-callout-default {
+  border-left-color: $darkGray;
+}
+
+.bs-callout-default h4 {
+  color: $darkGray;
+
+  a {
+    color: $darkGray;
+  }
+
+  a:hover {
+    color: $darkGray;
+  }
+}
+
+.bs-callout-primary {
+  border-left-color: #428bca;
+}
+
+.bs-callout-primary h4 {
+  color: $pending-locations;
+
+  a {
+    color: $pending-locations;
+  }
+
+  a:hover {
+    color: $pending-locations;
+  }
+
+}
+
+.bs-callout-success {
+  min-height: 150px;
+  border-left-color: $verified;
+
+  .status-link {
+    background: $verified;
+  }
+
+  .project-id {
+    @include callouts($verified);
+  }
+
+  a {
+    color: $verified;
+  }
+
+  a:hover {
+    color: $verified
+  }
+}
+
+.bs-callout-success h4 {
+  color: $verified;
+}
+
+.bs-callout-warning {
+  border-left-color: $no-locations;
+
+  .status-link {
+    background: $no-locations;
+  }
+
+  .project-id {
+    @include callouts($no-locations);
+  }
+
+  a {
+    color: $no-locations;
+  }
+  a:hover {
+    color: $no-locations;
+  }
+}
+
+.bs-callout-warning h4 {
+  color: $no-locations;
+
+}
+
+.bs-callout-info {
+  border-left-color: $pending-locations;
+  a {
+    color: $pending-locations;
+  }
+
+  .status-link {
+    background: $pending-locations;
+  }
+
+  .project-id {
+    @include callouts($pending-locations);
+  }
+  a {
+    color: $pending-locations;
+  }
+  a:hover {
+    color: $pending-locations;
+  }
+}
+
+.bs-callout-info h4 {
+  color: #5bc0de;
+}

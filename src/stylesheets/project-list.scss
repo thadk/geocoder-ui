@@ -1,0 +1,126 @@
+@import "variables.scss";
+
+button {
+  outline: none;
+}
+
+#project-search-form {
+  @include fontDefault($medium, $black);
+  input[type="text"] {
+    @include boxSizeBig();
+  }
+
+  div.radio {
+    margin-left: $base-unit;
+  }
+
+  input[type="checkbox"], input[type="radio"] {
+    display: block;
+    float: left;
+    margin: $px-unit * 3;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#project-search-list {
+  @include fontDefault($medium, $black);
+
+  .list-group {
+    padding: 0;
+  }
+
+  .bs-callout-info {
+    border-left-color: $pending-locations;
+    min-height: 150px;
+  }
+}
+
+/*Pagination*/
+.centered {
+  text-align: center;
+}
+
+.pagination.pagination-sm {
+  border: 0px solid red;
+  li {
+    a {
+      @include fontDefault($medium, $green);
+    }
+  }
+}
+
+.pagination > .active > a {
+  background-color: $gray;
+  border: $px-unit solid $gray-darker;
+  color: $black;
+}
+
+.pagination > .active > a:hover {
+  background-color: $gray;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  color: $black;
+  cursor: default;
+  background-color: $gray;
+  border-color: $gray;
+  z-index: 3;
+}
+
+.filter-section {
+  float: left;
+  margin-right: $base-unit;
+  margin-top: $base-unit / 1.1;
+  cursor: pointer;
+  .search-option-label {
+    display: table-cell;
+    font-size: $large;
+    vertical-align: top;
+    width: $extend - 5;
+  }
+  &:hover {
+    .search-option-label {
+      color: $green-light;
+    }
+    .select-box {
+      background-color: $green-light;
+    }
+  }
+}
+
+.filter-group-label {
+  color: $pending-locations;
+  display: block;
+  float: left;
+  font-size: $big - 2;
+  font-weight: $normal-weight-text + 100;
+  margin-right: $base-unit + 5;
+  padding-top: $px-unit * 5;
+}
+
+.geo-filter {
+  font-size: $big - 2;
+  margin-right: $base-unit + 5;
+  &:hover {
+    color: $darkGray !important;
+  }
+}
+
+.filter-label {
+  font-weight: bold;
+  float: left;
+  padding: $base-unit;
+  font-size: $large;
+}

@@ -1,0 +1,138 @@
+{
+  "dataentry": {
+    "activitydescription": "Descripción de la actividad",
+    "add": "Agregar",
+    "admin0": "País",
+    "admin1": "Primer nivel ADM",
+    "admin2": "Segundo nivel ADM",
+    "cancel": "Cancelar",
+    "code": "Código",
+    "coordinates": "Coordenadas",
+    "country": "País",
+    "delete": "Eliminar",
+    "deletemessage": "Esta ubicación se marcará como eliminada, ¿está seguro de que desea continuar?",
+    "descripcion": "Descripción",
+    "featuredesignation": "Designación",
+    "geographicexactness": "Exactitud geográfica",
+    "geometry": "Geometría",
+    "identifier": "Identificador",
+    "locationclass": "Clase de ubicación",
+    "locationreach": "Alcance",
+    "name": "Nombre",
+    "save": "Guardar",
+    "source": "Origen",
+    "sourceadmin": {
+      "stored": "Guardado",
+      "shapes": "Shapes",
+      "geonames": "Geonames"
+    },
+    "status": "Estado",
+    "type": "Tipo",
+    "update": "Actualizar",
+    "updatefromgeonames": "Actualizar datos desde el servicio Geonames",
+    "verify": "Verify"
+  },
+  "general": {
+    "no": "No",
+    "yes": "Si"
+  },
+  "header": {
+    "branding": "Open Aid Geocoder",
+    "options": {
+      "label": "Opciones"
+    },
+    "search": {
+      "holder": "Introduzca el texto a buscar",
+      "label": "Buscar ubicaciones",
+      "fuzzy": "Aproximado",
+      "country": "País",
+      "submit": "Buscar"
+    }
+  },
+  "help": {
+    "dataentry": {
+      "locationclass": "Clase de ubicación indica si la ubicación es un lugar poblado (Populated place - PPL), división administrativa (Administrative division - ADM), u otra característica topológica (por ejemplo un río o una montaña)",
+      "exactness": "Exactitud define si la ubicación representa el punto más razonablemente posible para este tipo de actividad o si se trata de una aproximación debido a la falta de datos más detallados",
+      "activitydescription": "Añadir aquí una descripción de la actividad en esta ubicación",
+      "savebtn": "Haga clic aquí para guardar o actualizar la ubicación",
+      "cancelbtn": "Haga clic aquí para cancelar",
+      "deletebtn": "Haga clic aquí para eliminar la ubicación"
+    },
+    "header": {
+      "textinput": "Escriba el nombre de una ubicación a buscar",
+      "fuzzycheck": "Seleccione la opción \"Aproximado\" para realizar una búsqueda por nombre aproximado",
+      "countrycheck": "Seleccione la opción \"País\" para realizar una búsqueda de ubicaciones solo dentro del país del proyecto",
+      "searchbtn": "Presione aquí para realizar la búsqueda"
+    },
+    "main": {
+      "panel_project": "Muestra información relacionada con el proyecto",
+      "panel_geocoding": "Muestra las ubicaciones existentes y las agregadas recientemente para el proyecto actual",
+      "panel_locations": "Muestra el resultado de la búsqueda de ubicaciones",
+      "map": "El mapa muestra las ubicaciones existentes (en amarillo) y las recientemente agregadas (en verde), como así también los resultados de la búsqueda (en gris)",
+      "countrylayercontrol": "Presione en este ícono para administrar las capas de países",
+      "layercontrol": "Presione en este ícono para administrar las capas y mapas base",
+      "infocontrol": "Información acerca del proyecto",
+      "zoomcontrol": "Use los controles de zoom para acercar o alejar el mapa",
+      "cancelbtn": "Presione en el botón Cancelar para volver al listado de proyectos",
+      "submitbtn": "Presione en el botón Guardar para guardar el proyecto"
+    }
+  },
+  "lang": {
+    "en": "Ingles",
+    "es": "Español",
+    "fr": "Frances"
+  },
+  "layerselector": {
+    "add": "Añadir",
+    "countryboundaries": "Contono de países",
+    "loading": "Cargando...",
+    "managecountrylayers": "Manejar capas de países",
+    "remove": "Quitar"
+  },
+  "locationpopup": {
+    "adminsource": {
+      "stored": "Usando valores guardados",
+      "shapes": "Usando valores desde la capa de país",
+      "geonames": "Usando valores desde diccionario geográfico"
+    },
+    "picklocation": "Tomar esta ubicación",
+    "update": "Actualizar"
+  },
+  "projectinfo": {
+    "country": "País",
+    "gazetteerlocations": "Ubicaciones",
+    "locationslist": {
+      "edit": "Editar",
+      "mapit": "Señalar"
+    },
+    "locationstatus": {
+      "existing": "EXISTENTE",
+      "updated": "ACTUALIZADA",
+      "deleted": "ELIMINADA",
+      "new": "NUEVA"
+    },
+    "locationtype": "Tipo de ubicación",
+    "nogeocodingdata": "Sin datos de geocodificación.",
+    "projectinfo": "Información"
+  },
+  "projectlist": {
+    "any": "Todos",
+    "export": "Exportar",
+    "geocodeproject": "Geocodificar Proyecto",
+    "geocodingfilter": "Filtro",
+    "geojsonexport": "GeoJson",
+    "import": "Importar",
+    "kmlexport": "Kml",
+    "pendingVerification": "Sin ubicaciones",
+    "verifiedLocation": "Verificadas",
+    "withNoLocation": "Con ubicaciones"
+  },
+  "projects": {
+    "projectsCount": "{{count}} proyecto encontrado"
+  },
+  "submitgeocoding": {
+    "cancel": "Cancelar",
+    "submit": "Guardar",
+    "submitmessage": "Esto sobrescribirá la geocodificación del proyecto con los cambios actuales. ¿Estás seguro?"
+  }
+}

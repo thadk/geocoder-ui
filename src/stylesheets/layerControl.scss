@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+.layer-control-container {
+  display: none;
+  width: $base-unit * 2.5;
+  background-color: $white;
+  position: absolute;
+  bottom: $base-unit * 20;
+  right: $base-unit;
+  padding: 0;
+  z-index: 10;
+}
+
+.show-layers-button {
+  background: #d2e5ee;
+  border: 1px solid #ccc;
+  padding: 3;
+  outline: none;
+  width: $base-unit * 10;
+  position: absolute;
+  bottom: 150;
+  right: 0;
+  color: darken(#ccc, 5%);
+  font-size: 13px;
+  &:hover {
+    background: $white;
+  }
+}
+
+.layers-content {
+  width: 250px;
+  max-height: 400px;
+  overflow-y: auto;
+  background-color: $white;
+  position: absolute;
+  bottom: $base-unit * 5;
+  padding: 6px 6px 4px 6px;
+  border: 1px solid;
+}
+
+
+

@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800');
+
+// Colors
+$black: #000000;
+$white: #ffffff;
+$darkGray: #666666;
+$header-bg: #f7f7f7;
+$green: #669933;
+$green-light: #89b85a;
+$red: #ca3a3a;
+$red-variant: #d9534f;
+$blue: #1c82cd;
+$pending-locations: #2ba0f7;
+$gray: #eeeeee;
+$gray-darker: #cccccc;
+$no-locations: #f0ad4e;
+$verified: #669933;
+$project-list-header-bg: #e7f4df;
+$warning-color: #f0ad4e;
+
+// Base units
+$base-unit: 10px;
+$em-unit: 1em;
+$px-unit: 1px;
+$extend: 100%;
+
+// Fonts
+$default-font: 'Open Sans', sans-serif;
+$icon-font: FontAwesome;
+$small: 9px;
+$medium: 11px;
+$large: 12px;
+$big: 14px;
+$huge: 16px;
+$giant: 18px;
+$regular: 10px;
+
+// Font weights
+$light-text: 300;
+$normal-weight-text: 450;
+$bold-text: 800;
+
+// Mixins 
+@mixin list-unstyled() {
+  list-style: none;
+  padding-left: 0;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// project list callouts
+@mixin callouts($bg) {
+  background: $bg;
+  color: $white;
+  float: left;
+  font-weight: $normal-weight-text + 100;
+  padding: $base-unit - 3 $base-unit / 2;
+  width: $extend - 70;
+}
+
+@mixin heading-icon() {
+  background-repeat: no-repeat;
+  background-position: 0 -2px;
+  background-size: $extend $extend;
+  display: block;
+  height: $base-unit * 3;
+  opacity: 1;
+  width: $base-unit * 3;
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+@mixin panel-section-icon() {
+  background-position: 0 0;
+  float: left;
+  height: $base-unit * 3;
+  margin-left: -($base-unit / 2);
+  margin-right: $base-unit / 2;
+  width: $base-unit * 3;
+}
+
+@mixin fontDefault($size,$color,$weight:100) {
+  font-family: $default-font;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin middle() {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  height: auto;
+}
+
+@mixin grayBorder() {
+  border: 1px solid $gray;
+}
+
+@mixin hover-filter($brightness){
+  -moz-filter:brightness($brightness);
+  -webkit-filter:brightness($brightness);
+  -ms-filter:brightness($brightness);
+  filter:brightness($brightness);
+}
+
+@mixin boxSizeBig() {
+  height: $base-unit * 3;
+}
+
+@mixin inputText() {
+  @include fontDefault($regular, $black);
+  height: $base-unit * 2.2;
+  @include grayBorder();
+  color: $black;
+}
+
+@mixin filter-option($border-color) {
+  border: $px-unit * 3 solid $border-color;
+  background-color: $white;
+  height: $base-unit + 5;
+  width: $base-unit + 5;
+}
+
+@mixin scrollbar() {
+  ::-webkit-scrollbar {
+    width: $base-unit;
+  }
+
+  ::-webkit-scrollbar-track {
+    @include border-radius(0);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @include border-radius(0);
+    background: rgba(158, 161, 165, 0.2);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  }
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
+
+// colors for projects
+.no-padding {
+  padding: 0;
+}
+.no-padding-r{
+  padding-right: 0;
+}
+
+.no-locations {
+  color: $no-locations;
+}
+
+.no-locations-background {
+  background-color: $no-locations !important;
+}
+
+.pending-locations {
+  color: $pending-locations;
+}
+
+.pending-locations-background {
+  background-color: $pending-locations;
+}
+
+.verified-locations {
+  color: $verified;
+}
+
+.verified-locations-background {
+  background-color: $verified;
+}
+
+.all-locations {
+  color: $black;
+}
+
+h1{
+  font-weight: $normal-weight-text + 200; 
+}

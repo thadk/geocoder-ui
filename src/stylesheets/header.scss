@@ -1,0 +1,28 @@
+@import "variables.scss";
+
+.header {
+  .navbar {
+    @include border-radius(0);
+    border: 1px rgb(244, 244, 244);
+    background-color: $gray;
+    margin-bottom: 0px;
+  }
+
+  .navbar-header {
+    height: $base-unit * 4;
+  }
+
+  .navbar-brand {
+    padding-left: $base-unit * 3.5;
+
+    @include fontDefault($giant, $darkGray);
+    font-weight: normal;
+  }
+
+  .home-icon {
+    color: #89b85a;
+    vertical-align: middle;
+    padding-left: $base-unit / 2;
+    margin-top: -$base-unit / 2;
+  }
+}
